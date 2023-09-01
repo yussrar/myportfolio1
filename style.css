@@ -1,0 +1,596 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* header */
+
+header {
+    background-color: #F7EDE2;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.bar {
+    width: 28px;
+    height: 3px;
+    background-color: #9E8189;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+}
+
+/* menu */
+
+.menu {
+    position: fixed;
+    margin-top: 10px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #9E8189;
+    transition: left 1s ease;
+    z-index: 100;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+
+.menu li {
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+.menu-open .bar.middle {
+    transform: rotate(-45deg);
+}
+
+.menu-open .bar.top {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-open .bar.bottom {
+    opacity: 0;
+}
+
+/* home */
+
+.home {
+    background-color: #F7EDE2;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 10em;
+    opacity: 0.1;
+    transform: translateY(20px);
+    /* Move the element slightly down */
+    transition: opacity 2s ease, transform 1s ease;
+    /* Add transitions */
+}
+
+.appear {
+    opacity: 1;
+    /* Make the element fully visible */
+    transform: translateY(0);
+    /* Move the element back to its original position */
+}
+
+#desc {
+    margin-top: 4em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12em;
+}
+
+#desc-p {
+    flex: 1;
+    margin: 1em;
+    padding-left: 8em;
+    position: relative;
+
+}
+
+#desc-p h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #F28482;
+    font-size: 50px;
+
+}
+
+#desc-p img {
+    width: 25em;
+    position: absolute;
+    margin-top: -30px;
+    animation: lineMovement 10s ease-in-out infinite;
+}
+
+@keyframes lineMovement {
+
+    0%,
+    100% {
+        margin-left: -2em;
+        /* Starting and ending position */
+    }
+
+    50% {
+        margin-left: 2em;
+        /* Middle position (change as desired) */
+    }
+}
+
+#desc-p p {
+    font-family: 'Indie Flower', cursive;
+    color: #9E8189;
+    font-size: 30px;
+}
+
+
+#desc-img {
+    flex: 1;
+    margin: 1em;
+    margin-top: 2em;
+}
+
+#desc-img img {
+    height: 370px;
+    margin: 0 auto;
+    border: 5px solid #85A59D;
+    border-radius: 50%;
+}
+
+#arrow-container {
+    text-align: center;
+    align-items: center;
+    margin-top: 5em;
+    height: 1em;
+
+}
+
+#arrow {
+    animation: arrowMovement 3s ease-in-out infinite;
+}
+
+@keyframes arrowMovement {
+
+    0%,
+    100% {
+        margin-top: 7em;
+        /* Starting and ending position */
+    }
+
+    50% {
+        margin-top: 4.8em;
+        /* Middle position (change as desired) */
+    }
+}
+
+/* media queries for home */
+
+@media (max-width: 1050px) {
+    #desc {
+        flex-direction: column;
+        gap: 2em;
+        /* Adjust the gap as desired */
+        margin-top: 2em;
+    }
+
+    #desc-p {
+        text-align: center;
+        padding-left: 0;
+        /* Remove the left padding */
+        margin: 0 auto;
+        /* Center the element */
+        max-width: 80%;
+        /* Limit the width */
+    }
+
+    #desc-p img {
+        position: static;
+        /* Reset position */
+        margin: 0 auto;
+        /* Center the image */
+    }
+
+    #desc-p p {
+        text-align: center;
+        margin: 1em 0;
+        /* Add vertical margin */
+    }
+
+    #desc-img {
+        text-align: center;
+        margin: 0 auto;
+        /* Center the element */
+        max-width: 80%;
+        /* Limit the width */
+    }
+
+    #desc-img img {
+        margin: 0 auto;
+        /* Center the image */
+    }
+}
+
+/* projects */
+
+.project {
+    margin: 1em;
+    padding: 1em;
+    /* opacity: 0.1;
+    transform: translateY(20px); /* Move the element slightly down */
+    /* transition: opacity 2s ease, transform 1s ease; Add transitions */
+}
+
+.subheadings {
+    color: #F28482;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+.project p {
+    font-family: 'Indie Flower', cursive;
+    color: #9E8189;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.project-div {
+    margin: 2em;
+    margin-top: 4em;
+    padding: 1em;
+    display: flex;
+    gap: 2em;
+    /* Adjust the gap as desired */
+}
+
+.pro-pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro-pic img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+}
+
+.pro-desc {
+    flex: 1;
+    border-left: 0.5px solid #85A59D;
+}
+
+.pro-desc p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 19px;
+    text-align: left;
+    padding-left: 2em;
+}
+
+.pro-links {
+    padding-left: 2em;
+}
+
+.pro-links img {
+    width: 40px;
+    opacity: 70%;
+}
+
+.pro-buttons {
+    display: flex;
+}
+
+.buttons {
+    border: none;
+    border-radius: 20px;
+    margin-left: 2em;
+    margin-top: 1em;
+    padding: 10px 50px;
+    background-color: #85A59D;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buttons:hover {
+    background-color: #9E8189;
+    transform: scale(1.05);
+}
+
+.project-transition {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+
+/* media queries for projects */
+
+@media (max-width: 1050px) {
+    .project-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .pro-pic {
+        order: -1;
+    }
+
+    .pro-desc {
+        flex: none;
+        border-left: none;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .pro-links {
+        padding-left: 0;
+        margin-top: 1em;
+    }
+
+    .pro-buttons {
+        margin-left: 0;
+        justify-content: center;
+
+    }
+
+    .buttons {
+        padding: 8px 30px;
+        /* Adjust padding for smaller buttons */
+        font-size: 14px;
+        /* Reduce font size */
+    }
+}
+
+/* skills section  */
+
+
+#skills-sec h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 3em;
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em 15em;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 calc(20% - 1em);
+    /* Distribute 20% width for each item with 1em gap */
+    max-width: calc(20% - 1em);
+}
+
+.skill img {
+    height: 70px;
+    width: 70px;
+}
+
+.skill p {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    color: #9E8189;
+}
+
+@media (max-width: 1000px) {
+    #skills {
+        margin: 2em 5em;
+        /* Adjust margin for smaller screens */
+    }
+
+    .skill {
+        flex: 1 0 calc(33.33% - 1em);
+        /* Distribute 33.33% width for each item with 1em gap */
+        max-width: calc(33.33% - 1em);
+    }
+}
+
+/* contact */
+
+#contact {
+    background-color: #F7EDE2;
+    display: flex;
+    padding: 5em;
+}
+
+#contact-desc {
+    flex: 1;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+#contact-desc a {
+    text-decoration: none;
+
+}
+
+#contact-desc img {
+    width: 45px;
+    height: 45px;
+    margin: 2em;
+}
+
+
+#contact-desc h2 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+#contact-desc p {
+    font-size: 20px;
+}
+
+
+#contact-form {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #F28482;
+    ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9E8189;
+}
+
+
+@media (max-width: 1000px) {
+    #contact {
+        flex-direction: column;
+        /* Stack divs in a column */
+    }
+
+    #contact-desc,
+    #contact-form {
+        margin: 0;
+        /* Remove margin for better spacing */
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .menu a {
+        font-size:2em;
+    }
+
+    .bar {
+        width: 36px;
+        height: 4px;
+    }
+
+    
+
+    button {
+        width: 10em;
+        height: 3em;
+        font-size: 1em;
+    }
+
+    .buttons {
+        width: 10em;
+        height: 3em;
+        font-size: 1em;
+    }
+
+    #contact-desc,
+    #contact-form {
+        margin: 0;
+        /* Remove margin for better spacing */
+    }
+
+    .subheadings {
+        font-size: 40px;
+    }
+
+    .project p {
+        font-size: 27px;
+    }
+
+    .pro-desc p {
+        font-size: 20px;
+    }
+
+    #contact-desc h2 {
+        font-size: 40px;
+    }
+
+    #contact-desc p {
+        font-size: 20px;
+    }
+
+    #contact-form {
+        padding: 5px;;
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 15px;
+    }
+
+}
+
+footer {
+    padding: 0.5em;
+    background-color: #9E8189;
+    margin-top: 1em;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+}
