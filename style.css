@@ -126,7 +126,7 @@ header {
     width: 25em;
     position: absolute;
     margin-top: -30px;
-    animation: lineMovement 10s ease-in-out infinite;
+    animation: lineMovement 2s ease-in-out infinite;
 }
 
 @keyframes lineMovement {
@@ -601,4 +601,19 @@ footer p {
     text-align: center;
     color: white;
     font-family: 'DM Sans', sans-serif;
+}
+
+
+/* thanks page */
+
+.thanks{
+    font-family:  'Open Sans', sans-serif ;
+    color: #9E8189;
+    font-size: 25px;
+    text-align: center;
+}
+
+.thanks .buttons a{
+    text-decoration: none;
+    color:white;
 }
