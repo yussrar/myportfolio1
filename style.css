@@ -277,6 +277,8 @@ header {
     align-items: center;
 }
 
+
+
 .pro-pic img {
     max-width: 100%;
     /* Ensure the image doesn't exceed its container */
@@ -285,6 +287,14 @@ header {
 .pro-desc {
     flex: 1;
     border-left: 0.5px solid #85A59D;
+}
+
+.pro-head{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 2em;
 }
 
 .pro-desc p {
@@ -313,6 +323,8 @@ header {
     padding: 10px 50px;
 
 }
+
+
 
 .buttons {
     border: none;
