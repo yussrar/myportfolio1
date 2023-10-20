@@ -5,6 +5,8 @@ body {
 
 /* header */
 
+
+
 header {
     background-color: #F7EDE2;
     color: white;
@@ -17,6 +19,8 @@ header {
     z-index: 100;
 
 }
+
+
 
 .hamburger-menu {
     display: flex;
@@ -46,6 +50,7 @@ header {
     z-index: 100;
     text-align: center;
 }
+
 
 .menu ul {
     list-style: none;
@@ -81,13 +86,11 @@ header {
 .home {
     background-color: #F7EDE2;
     width: 100%;
+    opacity: 0.1;
     padding-top: 1em;
     padding-bottom: 10em;
-    opacity: 0.1;
     transform: translateY(20px);
-    /* Move the element slightly down */
     transition: opacity 2s ease, transform 1s ease;
-    /* Add transitions */
 }
 
 .appear {
@@ -95,7 +98,9 @@ header {
     /* Make the element fully visible */
     transform: translateY(0);
     /* Move the element back to its original position */
-}
+} 
+
+
 
 #desc {
     margin-top: 4em;
@@ -122,7 +127,7 @@ header {
 
 }
 
-#desc-p img {
+/* #desc-p img {
     width: 25em;
     position: absolute;
     margin-top: -30px;
@@ -134,14 +139,12 @@ header {
     0%,
     100% {
         margin-left: -2em;
-        /* Starting and ending position */
     }
 
     50% {
         margin-left: 2em;
-        /* Middle position (change as desired) */
     }
-}
+} */
 
 #desc-p p {
     font-family: 'Indie Flower', cursive;
@@ -180,12 +183,10 @@ header {
     0%,
     100% {
         margin-top: 7em;
-        /* Starting and ending position */
     }
 
     50% {
         margin-top: 4.8em;
-        /* Middle position (change as desired) */
     }
 }
 
@@ -195,44 +196,34 @@ header {
     #desc {
         flex-direction: column;
         gap: 2em;
-        /* Adjust the gap as desired */
         margin-top: 2em;
     }
 
     #desc-p {
         text-align: center;
         padding-left: 0;
-        /* Remove the left padding */
         margin: 0 auto;
-        /* Center the element */
         max-width: 80%;
-        /* Limit the width */
     }
 
     #desc-p img {
         position: static;
-        /* Reset position */
         margin: 0 auto;
-        /* Center the image */
     }
 
     #desc-p p {
         text-align: center;
         margin: 1em 0;
-        /* Add vertical margin */
     }
 
     #desc-img {
         text-align: center;
         margin: 0 auto;
-        /* Center the element */
         max-width: 80%;
-        /* Limit the width */
     }
 
     #desc-img img {
         margin: 0 auto;
-        /* Center the image */
     }
 }
 
@@ -241,9 +232,6 @@ header {
 .project {
     margin: 1em;
     padding: 1em;
-    /* opacity: 0.1;
-    transform: translateY(20px); /* Move the element slightly down */
-    /* transition: opacity 2s ease, transform 1s ease; Add transitions */
 }
 
 .subheadings {
@@ -267,7 +255,6 @@ header {
     padding: 1em;
     display: flex;
     gap: 2em;
-    /* Adjust the gap as desired */
 }
 
 .pro-pic {
@@ -281,7 +268,6 @@ header {
 
 .pro-pic img {
     max-width: 100%;
-    /* Ensure the image doesn't exceed its container */
 }
 
 .pro-desc {
@@ -293,7 +279,7 @@ header {
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     color: #85A59D;;
-    padding-left: 2em;
+    padding-left: 1.5em;
 }
 
 .pro-desc p {
@@ -384,9 +370,7 @@ header {
 
     .buttons {
         padding: 8px 30px;
-        /* Adjust padding for smaller buttons */
         font-size: 14px;
-        /* Reduce font size */
     }
 }
 
@@ -412,7 +396,6 @@ header {
     justify-content: center;
     align-items: center;
     flex: 1 0 calc(20% - 1em);
-    /* Distribute 20% width for each item with 1em gap */
     max-width: calc(20% - 1em);
 }
 
@@ -430,12 +413,10 @@ header {
 @media (max-width: 1000px) {
     #skills {
         margin: 2em 5em;
-        /* Adjust margin for smaller screens */
     }
 
     .skill {
         flex: 1 0 calc(33.33% - 1em);
-        /* Distribute 33.33% width for each item with 1em gap */
         max-width: calc(33.33% - 1em);
     }
 }
@@ -519,13 +500,11 @@ button:hover {
 @media (max-width: 1000px) {
     #contact {
         flex-direction: column;
-        /* Stack divs in a column */
     }
 
     #contact-desc,
     #contact-form {
         margin: 0;
-        /* Remove margin for better spacing */
     }
 
 }
@@ -561,7 +540,6 @@ button:hover {
     #contact-desc,
     #contact-form {
         margin: 0;
-        /* Remove margin for better spacing */
     }
 
     .subheadings {
